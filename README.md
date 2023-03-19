@@ -1,19 +1,31 @@
 # Predicting the quality of wafer sensor for Photovoltaic applications
 
-• Led a cross-functional team to implement a faulty wafer detection that reduced financial losses by 30% annually for a solar photovoltaic manufacturer due to inaccurate prediction.
+• Conducted an analysis of Air-Pressure system fault detection in automobile that resulted in a 10% increase in revenue for the manufacturer.
 
-• Developed an end-to-end pipeline that ingested and processed large volumes of IoT collected data, and used machine learning algorithms to detect faulty wafers in real-time with an accuracy of 95%.
+• Built a production grade XGBoost based model to reduce false negatives, since cost incurred due to false negative was observed as 50 times higher than the false positives, and identified opportunities to increase revenue by reducing the cost due to unnecessary repairs.
 
 
-Tech Stack: Python, Git, MongoDB, Dockers, CI/CD pipeline, Amazon S3, Elastic Container Registry, EC2, Object Oriented Programming, Machine Learning.
+Tech Stack: Python, Git, Cassandra, MLOps, Dockers, Amazon S3, Elastic Container Registry, EC2, Object Oriented Programming, XGBoost
 
-Success metrics: 30% annual reduction in financial losses due to incorrect prediction; model accuracy of 95%; model deployment time of 2 weeks.
+Success metrics: 10% increase in revenue; model accuracy of 96%; reduction of false negative cases by 25%.
 
 More Details:
-Wafer quality plays an important role in determining the effi ciency of a solar cell and the power output of a module. Therefore it is very crucial toidentify the bad quality wafer sensor. State of the art methods to identify faulty sensor is very cumbersome as it requires manual intervention in terms of measuring voltage and poweroutput across each cell which may takes months of time. Recent automation in photovoltaic industry can now generate streaming of live sensor data. The objective of this project was to use this data toreduce the faulty sensor detection time with high accuracy. 
-Developed an end to end machine learning based project which involved IoT collected sensor data extraction from the database.
-Data ingestion phase involved importing the data from the MongoDB, and exporting collection data as pandas dataframe.
-Data validation included dropping the column which contains missing value more than specifi ed threshold and checking for data drift
-The subsequent steps involved Data Transformation, Model Selection, Model Tuning, Prediction, and logging framework. Deployment phase wascompleted using AWS, and model retraining.
-Such automation resulted in significant reduction of faulty sensor detection time (from months to few minutes) with 95% accurate prediction of faulty sensors.
+The system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as brakingand gear changes. The datasets positive class corresponds to component failures for a specifi c component of the APS system. The negative classcorresponds to trucks with failures for components not related to the APS system.
+
+The objective was to reduce the cost due to unnecessary repairs. Therefore, it was required to minimize the false predictions.
+
+Data validation phase involved dropping columns with more than 70% of missing values.
+
+Data visualization revealed that the target classes was highly imbalanced.
+
+Synthetic Minority Oversampling Technique (SMOTE) method was used to deal with the imbalanced dataset.
+
+Data transformation step involved used of Robust Scaler method.
+
+Used various imputation of null values such as: KNN, simple (mean and median), MICE, and PCA.
+
+Evaluated Machine Learning model on diff erent imputation techniques using parameters such as: Accuracy, F1 score, Precision, Recall, ROC-AUCScore, and Cost.
+The best Model was identifi ed as XGBoost Classifi er with 99.6% accuracy and cost of 2950.
+
+Used MLOps, CI/CD pipeline, Dockers, Containers during production and implementation, and AWS for deployment.
 
