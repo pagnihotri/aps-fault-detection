@@ -10,22 +10,22 @@ Tech Stack: Python, Git, Cassandra, MLOps, Dockers, Amazon S3, Elastic Container
 Success metrics: 10% increase in revenue; model accuracy of 96%; reduction of false negative cases by 25%.
 
 More Details:
-The system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as brakingand gear changes. The datasets positive class corresponds to component failures for a specifi c component of the APS system. The negative classcorresponds to trucks with failures for components not related to the APS system.
+• The system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as brakingand gear changes. The datasets positive class corresponds to component failures for a specifi c component of the APS system. The negative classcorresponds to trucks with failures for components not related to the APS system.
 
-The objective was to reduce the cost due to unnecessary repairs. Therefore, it was required to minimize the false predictions.
+• The objective was to reduce the cost due to unnecessary repairs. Therefore, it was required to minimize the false predictions.
 
-Data validation phase involved dropping columns with more than 70% of missing values.
+• Data validation phase involved dropping columns with more than 70% of missing values.
 
-Data visualization revealed that the target classes was highly imbalanced.
+• Data visualization revealed that the target classes was highly imbalanced.
 
-Synthetic Minority Oversampling Technique (SMOTE) method was used to deal with the imbalanced dataset.
+• Synthetic Minority Oversampling Technique (SMOTE) method was used to deal with the imbalanced dataset.
 
-Data transformation step involved used of Robust Scaler method.
+• Data transformation step involved used of Robust Scaler method.
 
-Used various imputation of null values such as: KNN, simple (mean and median), MICE, and PCA.
+• Used various imputation of null values such as: KNN, simple (mean and median), MICE, and PCA.
 
-Evaluated Machine Learning model on diff erent imputation techniques using parameters such as: Accuracy, F1 score, Precision, Recall, ROC-AUCScore, and Cost.
+• Evaluated Machine Learning model on diff erent imputation techniques using parameters such as: Accuracy, F1 score, Precision, Recall, ROC-AUCScore, and Cost.
 The best Model was identifi ed as XGBoost Classifi er with 99.6% accuracy and cost of 2950.
 
-Used MLOps, CI/CD pipeline, Dockers, Containers during production and implementation, and AWS for deployment.
+• Used MLOps, CI/CD pipeline, Dockers, Containers during production and implementation, and AWS for deployment.
 
