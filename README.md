@@ -1,4 +1,4 @@
-# Predicting the quality of wafer sensor for Photovoltaic applications
+# Machine Learning based Air-pressure sensor fault prediction
 
 • Conducted an analysis of Air-Pressure system fault detection in automobile that resulted in a 10% increase in revenue for the manufacturer.
 
